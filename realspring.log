@@ -1,0 +1,39 @@
+2018-06-12 14:57:08.605  INFO 1136 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-D1T6J0V with PID 1136 (C:\Users\Aldo\IdeaProjects\PR46-realspring\target\classes started by Aldo in C:\Users\Aldo\IdeaProjects\PR46-realspring)
+2018-06-12 14:57:08.610  INFO 1136 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 14:57:13.524  INFO 1136 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 14:57:13.524  INFO 1136 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 14:57:13.813  INFO 1136 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 14:57:16.649  INFO 1136 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 8.833 seconds (JVM running for 10.152)
+2018-06-12 14:57:29.296  INFO 1136 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-12 14:59:34.101  INFO 16092 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-D1T6J0V with PID 16092 (C:\Users\Aldo\IdeaProjects\PR46-realspring\target\classes started by Aldo in C:\Users\Aldo\IdeaProjects\PR46-realspring)
+2018-06-12 14:59:34.103 DEBUG 16092 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
+2018-06-12 14:59:34.104  INFO 16092 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 14:59:36.968  INFO 16092 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 14:59:36.970  INFO 16092 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 14:59:37.122  INFO 16092 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 14:59:38.918  INFO 16092 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 5.184 seconds (JVM running for 5.864)
+2018-06-12 15:00:04.607  INFO 16092 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-12 15:00:04.689 DEBUG 16092 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : findByTitolo Film called
+2018-06-12 15:00:04.690 DEBUG 16092 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : FilmService -> findByTitle() called with titolo: 300
+2018-06-12 15:02:19.890  INFO 6676 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-D1T6J0V with PID 6676 (C:\Users\Aldo\IdeaProjects\PR46-realspring\target\classes started by Aldo in C:\Users\Aldo\IdeaProjects\PR46-realspring)
+2018-06-12 15:02:19.893 DEBUG 6676 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
+2018-06-12 15:02:19.894  INFO 6676 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 15:02:22.872  INFO 6676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 15:02:22.876  INFO 6676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 15:02:23.024  INFO 6676 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 15:02:24.974  INFO 6676 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 5.457 seconds (JVM running for 6.297)
+2018-06-12 15:02:54.356  INFO 6676 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-12 15:02:54.489 DEBUG 6676 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : findByTitolo Film called
+2018-06-12 15:02:54.490 DEBUG 6676 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : FilmService -> findByTitle() called with titolo: quinto
+2018-06-12 15:03:48.147 DEBUG 6676 --- [http-nio-8080-exec-3] i.n.a.r.controllers.FilmController       : findByRegista Film called
+2018-06-12 15:03:48.151 DEBUG 6676 --- [http-nio-8080-exec-3] i.n.a.r.controllers.FilmController       : FilmService -> findByDirector() called with regista: coppola
+2018-06-12 15:09:08.513  INFO 5860 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Starting RealspringApplication on DESKTOP-D1T6J0V with PID 5860 (C:\Users\Aldo\IdeaProjects\PR46-realspring\target\classes started by Aldo in C:\Users\Aldo\IdeaProjects\PR46-realspring)
+2018-06-12 15:09:08.513 DEBUG 5860 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Running with Spring Boot v1.5.13.RELEASE, Spring v4.3.17.RELEASE
+2018-06-12 15:09:08.513  INFO 5860 --- [restartedMain] i.n.a.realspring.RealspringApplication   : No active profile set, falling back to default profiles: default
+2018-06-12 15:09:11.245  INFO 5860 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-06-12 15:09:11.251  INFO 5860 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.31
+2018-06-12 15:09:11.403  INFO 5860 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-06-12 15:09:13.187  INFO 5860 --- [restartedMain] i.n.a.realspring.RealspringApplication   : Started RealspringApplication in 5.037 seconds (JVM running for 5.806)
+2018-06-12 15:09:18.220  INFO 5860 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2018-06-12 15:09:18.355 DEBUG 5860 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : findByAnno Film called
+2018-06-12 15:09:18.355 DEBUG 5860 --- [http-nio-8080-exec-1] i.n.a.r.controllers.FilmController       : FilmService -> findByYear() called with anno: 1972
