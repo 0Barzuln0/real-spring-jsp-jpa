@@ -63,4 +63,20 @@ public class FilmService {
         return tmp;
     }
 
+    public Film add(Film f){
+        log.debug("FilmService -> add() called with film: " + f);
+        if(f != null && f.getId() == 0 && f.getTitolo() != null && f.getTitolo().length() > 0){
+            long maxId = videoteca.stream()
+                        .max((f1, f2) -> (int)(f1.getId()-f2.getId()))
+                        .get()
+                        .getId();
+            f.setId(++maxId);
+            log.debug(f);
+            videoteca.add(f);
+            return f;
+        }else{
+            return new Film();
+        }
+    }
+
 }// end class
