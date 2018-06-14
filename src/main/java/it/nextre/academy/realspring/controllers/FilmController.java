@@ -2,11 +2,11 @@ package it.nextre.academy.realspring.controllers;
 
 import it.nextre.academy.realspring.Services.FilmService;
 import it.nextre.academy.realspring.models.Film;
+import it.nextre.academy.realspring.utils.ResponseHelper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/film")
@@ -15,74 +15,88 @@ public class FilmController {
     @Autowired
     FilmService filmService;
 
+    @Autowired
+    ResponseHelper responseHelper;
+
     Logger log = Logger.getLogger(FilmController.class);
 
 
     @GetMapping("/")
-    public List<Film> getAll(){
+    public ResponseEntity getAll(){
         log.debug("getAll Film called");
-        return filmService.getAll();
+        return responseHelper.ok(filmService.getAll());
     }
 
     @GetMapping("/{idFilm}")
-    public Film findById(@PathVariable("idFilm") Long id){
+    public ResponseEntity findById(@PathVariable("idFilm") Long id){
         log.debug("findById Film called");
         if(id != null){
-            return filmService.findById(id);
+            return responseHelper.ok(filmService.findById(id));
         }
-        return null;
+        return responseHelper.badRequest("Invalid input data");
     }
 
     @GetMapping("/titolo/{titoloFilm}")
-    public List<Film> findByTitolo(@PathVariable("titoloFilm") String titolo){
+    public ResponseEntity findByTitolo(@PathVariable("titoloFilm") String titolo){
         log.debug("findByTitolo Film called");
         if(titolo != null){
-            return filmService.findByTitle(titolo);
+            return responseHelper.ok(filmService.findByTitle(titolo));
         }
-        return null;
+        return responseHelper.badRequest("Invalid input data");
     }
 
     @GetMapping("/regista/{registaFilm}")
-    public List<Film> findByRegista(@PathVariable("registaFilm") String regista){
+    public ResponseEntity findByRegista(@PathVariable("registaFilm") String regista){
         log.debug("findByRegista Film called");
         if(regista != null){
-            return filmService.findByDirector(regista);
+            return responseHelper.ok(filmService.findByDirector(regista));
         }
-        return null;
+        return responseHelper.badRequest("Invalid input data");
     }
 
     @GetMapping("/anno/{annoFilm}")
-    public List<Film> findByAnno(@PathVariable("annoFilm") Integer anno){
+    public ResponseEntity findByAnno(@PathVariable("annoFilm") Integer anno){
         log.debug("findByAnno Film called");
         if(anno != null){
-            return filmService.findByYear(anno);
+            return responseHelper.ok(filmService.findByYear(anno));
         }
-        return null;
+        return responseHelper.badRequest("Invalid input data");
     }
 
     @PostMapping("/")
-    public Film addFilm(@RequestBody Film f){
+    public ResponseEntity addFilm(@RequestBody Film f){
         log.debug("addFilm Film called");
-        return filmService.add(f);
+        try {
+            return responseHelper.ok(filmService.add(f));
+        } catch (Exception e) {
+            return responseHelper.badRequest(e.getMessage());
+        }
     }
 
     @PutMapping("/{idFilm}")
-    public Film updateFilm(@RequestBody Film f, @PathVariable("idFilm") long id){
+    public ResponseEntity updateFilm(@RequestBody Film f, @PathVariable("idFilm") long id){
         log.debug("updateFilm Film called");
         if(f.getId() == id) {
-            return filmService.save(f);
-        }else{
-            return new Film();
+            try {
+                return responseHelper.ok(filmService.save(f));
+            } catch (Exception e) {
+                return responseHelper.badRequest(e.getMessage());
+            }
         }
+        return responseHelper.badRequest("Invalid input data, Invalid ID");
     }
 
     @DeleteMapping("/{idFilm}")
-    public Boolean deleteFilm(@RequestBody Film f, @PathVariable("idFilm") long id){
+    public ResponseEntity deleteFilm(@RequestBody Film f, @PathVariable("idFilm") long id){
         log.debug("updateFilm Film called");
         if(f.getId() == id) {
-            return filmService.delete(f);
-        }else{
-            return false;
+            try {
+                return responseHelper.ok(filmService.delete(f));
+            } catch (Exception e) {
+                return responseHelper.badRequest(e.getMessage());
+            }
         }
+        return responseHelper.badRequest("Invalid input data, Invalid ID");
     }
+
 }// end class
