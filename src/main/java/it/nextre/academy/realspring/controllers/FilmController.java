@@ -1,7 +1,7 @@
 package it.nextre.academy.realspring.controllers;
 
 import it.nextre.academy.realspring.Services.FilmService;
-import it.nextre.academy.realspring.models.Film;
+import it.nextre.academy.realspring.entities.Film;
 import it.nextre.academy.realspring.utils.ResponseHelper;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
