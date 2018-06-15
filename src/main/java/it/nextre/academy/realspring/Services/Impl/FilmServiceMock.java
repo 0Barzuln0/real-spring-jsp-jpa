@@ -4,6 +4,7 @@ import it.nextre.academy.realspring.Services.FilmService;
 import it.nextre.academy.realspring.controllers.FilmController;
 import it.nextre.academy.realspring.entities.Film;
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,6 +13,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
+@Qualifier("mockfilm")
 public class FilmServiceMock implements FilmService {
 
     Logger log = Logger.getLogger(FilmController.class);
