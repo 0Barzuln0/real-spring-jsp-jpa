@@ -1,0 +1,32 @@
+body{
+    background: darkkhaki;
+    color: white;
+}
+
+h1{
+    color: orangered;
+    font: 48px Verdana;
+    margin: 0px;
+}
+
+ul{
+    background: whitesmoke;
+    padding: 10px 10px 10px 10px;
+    border: orangered;
+    border-left: 5px;
+    border-right: 5px;
+    border-top: 5px;
+    border-bottom: 5px;
+
+}
+
+li{
+    color: deepskyblue;
+    font: 15px "Times New Roman";
+    list-style-type: circle;
+}
+
+img{
+    align-items: right;
+    size: 450px 200px;
+}
